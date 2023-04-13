@@ -1,0 +1,69 @@
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\appsettings.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\omnisharp.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.exe
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.deps.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.runtimeconfig.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.runtimeconfig.dev.json
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\ref\WebApi.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\WebApi.pdb
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.AssemblyInfoInputs.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.AssemblyInfo.cs
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\scopedcss\bundle\WebApi.styles.css
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.csproj.CopyComplete
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\ref\WebApi.dll
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.pdb
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
+C:\Users\VivoBook\Desktop\dotnet-5-jwt-authentication-api-master\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.csproj.AssemblyReference.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.AssemblyInfoInputs.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.AssemblyInfo.cs
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.dll
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\ref\WebApi.dll
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.pdb
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\appsettings.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\omnisharp.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.exe
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.deps.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.runtimeconfig.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.runtimeconfig.dev.json
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\ref\WebApi.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\WebApi.pdb
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\BusinessLogic.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Database.dll
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\BusinessLogic.pdb
+C:\Users\VivoBook\Desktop\New folder\Application\bin\Debug\net5.0\Database.pdb
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\scopedcss\bundle\WebApi.styles.css
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.csproj.CopyComplete
+C:\Users\VivoBook\Desktop\New folder\Application\obj\Debug\net5.0\WebApi.genruntimeconfig.cache

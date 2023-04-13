@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi.csproj", "{F9012772-6FBD-4163-B01E-3E065234F5A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "..\Database\Database.csproj", "{D4BCC8FB-CCF0-4631-8DA5-F129AFB7407A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "..\BusinessLogic\BusinessLogic.csproj", "{479E0829-F636-48AD-90BF-C22C155F5734}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9012772-6FBD-4163-B01E-3E065234F5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9012772-6FBD-4163-B01E-3E065234F5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9012772-6FBD-4163-B01E-3E065234F5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9012772-6FBD-4163-B01E-3E065234F5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BCC8FB-CCF0-4631-8DA5-F129AFB7407A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BCC8FB-CCF0-4631-8DA5-F129AFB7407A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BCC8FB-CCF0-4631-8DA5-F129AFB7407A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BCC8FB-CCF0-4631-8DA5-F129AFB7407A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479E0829-F636-48AD-90BF-C22C155F5734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479E0829-F636-48AD-90BF-C22C155F5734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479E0829-F636-48AD-90BF-C22C155F5734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479E0829-F636-48AD-90BF-C22C155F5734}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A4CC24-D88A-4221-8D07-29F4ACB69808}
+	EndGlobalSection
+EndGlobal
