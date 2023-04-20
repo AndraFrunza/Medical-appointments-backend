@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9crGmp5IMPg4RwwoQ35WhJX4UKs5kHFX7mAWZllHkdTrJytiZoqIW00iuW7ozAfLoedBj3bHOx8+RbOOcWwQSw==",
+  "dgSpecHash": "Erp0ogkt6DBlIP5m2RA1qjshUQ3tvoqY8Foe33vj5wEC6ue5HnFpaYuqnJSYA6b/6jFguNDIm58QiQEyABifBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VivoBook\\Desktop\\New folder\\BusinessLogic\\BusinessLogic.csproj",
+  "projectFilePath": "C:\\Licenta\\Licenta Backend\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

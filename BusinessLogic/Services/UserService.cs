@@ -10,7 +10,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
@@ -19,9 +18,9 @@ namespace BusinessLogic.Services
         {
             // users hardcoded for simplicity, store in a db with hashed passwords in production applications
             private List<UserEntity> _users = new List<UserEntity>
-        {
+            {
             new UserEntity { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
-        };
+            };
 
             private readonly AppSettings _appSettings;
 

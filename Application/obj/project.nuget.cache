@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EffQFab85XABMoatm9aGptwU1Bo4xNOframcNLSKj5HLsdZ1uPopDCaPZWsPmr65aXtEf1dP63E1Pt7MKkzy+A==",
+  "dgSpecHash": "gyhDLT0sJdyxZubhayP9QbLy97jcM8Xw2LBVc8sCiP3Kf2GIO52tvWu+V8/t4UE3IBPyLmmgwdhowLoQhgT1iQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VivoBook\\Desktop\\New folder\\Application\\WebApi.csproj",
+  "projectFilePath": "C:\\Licenta\\Licenta Backend\\Application\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
