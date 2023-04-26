@@ -13,15 +13,6 @@ namespace BusinessLogic.Dtos
         public string Token { get; set; }
 
 
-        public AuthenticateResponsePatientDto(PatientEntity patient, string token)
-        {
-            Id = patient.Id;
-            FirstName = patient.FirstName;
-            LastName = patient.LastName;
-            MobilePhone = patient.MobilePhone;
-            EmailAdress = patient.EmailAdress;
-            //Username = patient.Username;
-            Token = token;
-        }
+      
     }
 }

@@ -10,12 +10,6 @@ namespace BusinessLogic.Dtos
         public string Token { get; set; }
 
 
-        public AuthenticateResponseAdminDto(AdminEntity admin, string token)
-        {
-            Id = admin.Id;
-            EmailAdress = admin.EmailAdress;
-            //Username = patient.Username;
-            Token = token;
-        }
+        
     }
 }

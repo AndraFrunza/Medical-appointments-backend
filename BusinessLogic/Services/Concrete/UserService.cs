@@ -19,7 +19,7 @@ namespace BusinessLogic.Services
             // users hardcoded for simplicity, store in a db with hashed passwords in production applications
             private List<UserEntity> _users = new List<UserEntity>
             {
-            new UserEntity { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
+            //new UserEntity { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
             };
 
             private readonly AppSettings _appSettings;
@@ -29,18 +29,18 @@ namespace BusinessLogic.Services
                 _appSettings = appSettings.Value;
             }
 
-            public AuthenticateResponseDto Authenticate(AuthenticateRequestDto model)
-            {
-                var user = _users.SingleOrDefault(x => x.Username == model.Username && x.Password == model.Password);
+            //public AuthenticateResponseDto Authenticate(AuthenticateRequestDto model)
+            //{
+            //    var user = _users.SingleOrDefault(x => x.Username == model.Username && x.Password == model.Password);
 
-                // return null if user not found
-                if (user == null) return null;
+            //    // return null if user not found
+            //    if (user == null) return null;
 
-                // authentication successful so generate jwt token
-                var token = generateJwtToken(user);
+            //    // authentication successful so generate jwt token
+            //    var token = generateJwtToken(user);
 
-                return new AuthenticateResponseDto(user, token);
-            }
+            //    return new AuthenticateResponseDto(user, token);
+            //}
 
             public IEnumerable<UserEntity> GetAll()
             {
@@ -68,6 +68,11 @@ namespace BusinessLogic.Services
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 return tokenHandler.WriteToken(token);
             }
+
+        public AuthenticateResponseDto Authenticate(AuthenticateRequestDto model)
+        {
+            throw new NotImplementedException();
         }
+    }
     }
 

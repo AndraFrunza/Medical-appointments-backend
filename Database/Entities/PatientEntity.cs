@@ -1,12 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 
 namespace Database.Entities
 {
-    public class PatientEntity : UserEntity
+    public class PatientEntity 
     {
+        public int Id { get; set; }
         public string MobilePhone { get; set; }
 
-        public string EmailAdress { get; set; }
+        public UserEntity User { get; set; }
+
+        public virtual ICollection <AppointmentEntity> Appointments { get; set; }
     }
 }

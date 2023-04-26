@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Database.Entities
 {
-    public class AdminEntity : UserEntity
+    public class AdminEntity 
     {
-        public string EmailAdress { get; set; }
+        public int Id { get; set; }
+        public UserEntity User { get; set; }
     }
 }

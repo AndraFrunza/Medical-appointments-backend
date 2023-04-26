@@ -1,8 +1,12 @@
 ﻿using BusinessLogic.Helpers;
 using BusinessLogic.Services;
 using BusinessLogic.Services.Interfaces;
+using Database.Context;
+using Database.Repositories.Abstract;
+using Database.Repositories.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,8 +30,16 @@ namespace WebApi
             // configure strongly typed settings object
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
+            services.AddDbContext<ClinicaContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("ConnectionString"));
+            }) ;
+
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IRoleRepository, RoleRepository>();
+
+            services.AddScoped<IRoleService, RoleService>();
         }
 
         // configure the HTTP request pipeline

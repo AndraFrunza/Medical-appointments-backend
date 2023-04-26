@@ -19,20 +19,6 @@ namespace BusinessLogic.Dtos
         public string Token { get; set; }
 
 
-        public AuthenticateResponseProgrammingDto(ProgrammingEntity programming, string token)
-        {
-            Id = programming.Id;
-            Hour = programming.Hour;
-            FirstName = programming.FirstName;
-            LastName = programming.LastName;
-            Symptom = programming.Symptom;
-            MobilePhone = programming.MobilePhone;
-            EmailAdress = programming.EmailAdress;
-            DateOfBirth = programming.DateOfBirth;
-            Weight = programming.Weight;
-            Height = programming.Height;
-            //Username = user.Username;
-            Token = token;
-        }
+    
     }
 }

@@ -12,13 +12,6 @@ namespace BusinessLogic.Dtos
         public string Token { get; set; }
 
 
-        public AuthenticateResponseDoctorDto(DoctorEntity doctor, string token)
-        {
-            Id = doctor.Id;
-            EmailAdress = doctor.EmailAdress;
-            Specialization = doctor.Specialization;
-            //Username = patient.Username;
-            Token = token;
-        }
+      
     }
 }

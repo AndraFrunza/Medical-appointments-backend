@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Database.Entities
 {
-    public class DoctorEntity : UserEntity
+    public class DoctorEntity 
     {
-        public string EmailAdress { get; set; }
+        public int Id { get; set; }
+        public UserEntity User { get; set; }
         public string Specialization { get; set; }
+        public CabinetEntity Cabinet { get; set; }
+        public virtual ICollection<AppointmentEntity> Appointments { get; set; }
     }
 }
