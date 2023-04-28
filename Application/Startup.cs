@@ -1,5 +1,7 @@
 ﻿using BusinessLogic.Helpers;
 using BusinessLogic.Services;
+using BusinessLogic.Services.Abstract;
+using BusinessLogic.Services.Concrete;
 using BusinessLogic.Services.Interfaces;
 using Database.Context;
 using Database.Repositories.Abstract;
@@ -40,6 +42,10 @@ namespace WebApi
             services.AddScoped<IRoleRepository, RoleRepository>();
 
             services.AddScoped<IRoleService, RoleService>();
+
+            services.AddScoped<IPatientRepository, PatientRepository>();
+
+            services.AddScoped<IPatientService, PatientService>();
         }
 
         // configure the HTTP request pipeline
