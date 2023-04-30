@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Database.Entities;
+using System.Collections.Generic;
 
-
-namespace Database.Entities
+namespace BusinessLogic.Dtos
 {
-    public class CabinetEntity
+   public class CabinetDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -28,11 +28,11 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult GetByMobilePhone(int number)
         {
-            var pacient = patientService.GetByMobilePhone(number);
-            if (pacient == null)
+            var patient = patientService.GetByMobilePhone(number);
+            if (patient == null)
                 return BadRequest(new { message = $"Nu exista niciun pacient cu numarul de telefon {number}" });
 
-            return Ok(pacient);
+            return Ok(patient);
         }
 
         [HttpPost]
