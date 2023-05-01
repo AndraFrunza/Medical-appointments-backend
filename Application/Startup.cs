@@ -37,15 +37,26 @@ namespace WebApi
             }) ;
 
             // configure DI for application services
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
-
+            
             services.AddScoped<IRoleRepository, RoleRepository>();
-
             services.AddScoped<IRoleService, RoleService>();
 
             services.AddScoped<IPatientRepository, PatientRepository>();
-
             services.AddScoped<IPatientService, PatientService>();
+
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
+
+            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IAdminService, AdminService>();
+
+            services.AddScoped<ICabinetRepository, CabinetRepository>();
+            services.AddScoped<ICabinetService, CabinetService>();
+
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
+            services.AddScoped<IDoctorService, DoctorService>();
         }
 
         // configure the HTTP request pipeline

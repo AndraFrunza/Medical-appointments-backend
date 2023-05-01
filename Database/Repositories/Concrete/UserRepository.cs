@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Database.Repositories.Concrete
 {
-    class UserRepository : IUserRepository
+   public class UserRepository : IUserRepository
     {
         private readonly ClinicaContext context;
 

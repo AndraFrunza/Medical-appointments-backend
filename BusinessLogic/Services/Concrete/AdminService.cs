@@ -2,7 +2,6 @@
 using BusinessLogic.Mapper;
 using BusinessLogic.Services.Abstract;
 using Database.Repositories.Abstract;
-using System;
 using System.Collections.Generic;
 
 namespace BusinessLogic.Services.Concrete
@@ -42,12 +41,16 @@ namespace BusinessLogic.Services.Concrete
 
         public AdminDto GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            var entity = repository.GetByEmail(email);
+            var dto = AdminMapper.ToDto(entity);
+            return dto;
         }
 
         public AdminDto GetByFirstName(string firstname)
         {
-            throw new NotImplementedException();
+            var entity = repository.GetByFirstName(firstname);
+            var dto = AdminMapper.ToDto(entity);
+            return dto;
         }
 
         public AdminDto GetById(int id)
@@ -63,17 +66,24 @@ namespace BusinessLogic.Services.Concrete
 
         public AdminDto GetByLastName(string lastname)
         {
-            throw new NotImplementedException();
+            var entity = repository.GetByLastName(lastname);
+            var dto = AdminMapper.ToDto(entity);
+            return dto;
         }
 
         public AdminDto GetByMobilePhone(int number)
         {
-            throw new NotImplementedException();
+            var entity = repository.GetByMobilePhone(number);
+            var dto = AdminMapper.ToDto(entity);
+            return dto;
         }
 
         public AdminDto Update(AdminDto dto)
         {
-            throw new NotImplementedException();
+            var entity = AdminMapper.ToEntity(dto);
+            entity = repository.Update(entity);
+            dto = AdminMapper.ToDto(entity);
+            return dto;
         }
     }
 }
