@@ -1,10 +1,5 @@
 ﻿using BusinessLogic.Dtos;
 using Database.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Mapper
 {
@@ -12,12 +7,13 @@ namespace BusinessLogic.Mapper
     {
         public static UserEntity ToEntity(UserDto dto)
         {
-            return new UserEntity { Id = dto.Id, FirstName = dto.FirstName, LastName = dto.LastName, Email = dto.Email, Password = dto.Password, Role = dto.Role };
+            return new UserEntity { Id = dto.Id, FirstName = dto.FirstName, LastName = dto.LastName, Email = dto.Email, Password = dto.Password };
         }
 
-        public static UserDto ToDto(UserEntity dto)
+        public static UserDto ToDto(UserEntity entity)
         {
-            return new UserDto { Id = dto.Id, FirstName = dto.FirstName, LastName = dto.LastName, Email = dto.Email, Password = dto.Password, Role = dto.Role };
+            var role = RoleMapper.ToDto(entity.Role);  
+            return new UserDto { Id = entity.Id, FirstName = entity.FirstName, LastName = entity.LastName, Email = entity.Email, Password = entity.Password, Role = role };
         }
     }
 }

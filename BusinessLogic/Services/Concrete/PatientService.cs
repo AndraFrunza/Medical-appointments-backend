@@ -9,15 +9,18 @@ namespace BusinessLogic.Services.Concrete
    public class PatientService : IPatientService
     {
         private readonly IPatientRepository repository;
+        private readonly IRoleRepository roleRepository;
 
-        public PatientService(IPatientRepository repository)
+        public PatientService(IPatientRepository repository, IRoleRepository roleRepository)
         {
             this.repository = repository;
+            this.roleRepository = roleRepository;
         }
 
         public PatientDto Create(PatientDto dto)
         {
-            var patient = PatientMapper.ToEntity(dto);
+            var role = roleRepository.GetById(dto.RoleId);
+            var patient = PatientMapper.ToEntity(dto, role);
             patient = repository.Create(patient);
             dto = PatientMapper.ToDto(patient);
             return dto;
@@ -59,7 +62,8 @@ namespace BusinessLogic.Services.Concrete
 
         public PatientDto Update(PatientDto dto)
         {
-            var patient = PatientMapper.ToEntity(dto);
+            var role = roleRepository.GetById(dto.RoleId);
+            var patient = PatientMapper.ToEntity(dto, role);
             patient = repository.Update(patient);
             dto = PatientMapper.ToDto(patient);
             return dto;

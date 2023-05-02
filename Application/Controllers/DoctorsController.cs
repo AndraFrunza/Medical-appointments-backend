@@ -14,7 +14,7 @@ namespace WebApi.Controllers
             this.doctorService = doctorService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var doctor = doctorService.GetById(id);
@@ -24,7 +24,7 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet]
+        [HttpGet("specialization/{specialization}")]
         public IActionResult GetBySpecialization(string specialization)
         {
             var doctor = doctorService.GetBySpecialization(specialization);
@@ -34,8 +34,8 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet]
-        public IActionResult GetByMobilePhone(int number)
+        [HttpGet("number/{number}")]
+        public IActionResult GetByMobilePhone(string number)
         {
             var doctor = doctorService.GetByMobilePhone(number);
             if (doctor == null)
@@ -44,7 +44,7 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet]
+        [HttpGet("firstname/{firstname}")]
         public IActionResult GetByFirstName(string firstname)
         {
             var doctor = doctorService.GetByFirstName(firstname);
@@ -54,7 +54,7 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet]
+        [HttpGet("lastname/{lastname}")]
         public IActionResult GetByLastName(string lastname)
         {
             var doctor = doctorService.GetByLastName(lastname);
@@ -64,7 +64,7 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet]
+        [HttpGet("email/{email}")]
         public IActionResult GetByEmail(string email)
         {
             var doctor = doctorService.GetByEmail(email);

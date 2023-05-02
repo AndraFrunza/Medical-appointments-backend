@@ -14,7 +14,7 @@ namespace WebApi.Controllers
             this.cabinetService = cabinetService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var cabinet = cabinetService.GetById(id);
@@ -24,7 +24,7 @@ namespace WebApi.Controllers
             return Ok(cabinet);
         }
 
-        [HttpGet]
+        [HttpGet("name/{name}")]
         public IActionResult GetByName(string name)
         {
             var cabinet = cabinetService.GetByName(name);

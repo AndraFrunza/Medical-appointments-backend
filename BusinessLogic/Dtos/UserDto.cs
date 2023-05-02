@@ -10,7 +10,7 @@ namespace BusinessLogic.Dtos
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public RoleEntity Role { get; set; }
+        public RoleDto Role { get; set; }
 
 
         [JsonIgnore]

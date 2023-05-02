@@ -12,7 +12,9 @@ namespace BusinessLogic.Mapper
 
         public static AppointmentDto ToDto(AppointmentEntity entity)
         {
-            return new AppointmentDto { Id = entity.Id, Hour = entity.Hour, Symptom = entity.Symptom, MobilePhone = entity.MobilePhone, EmailAdress = entity.EmailAdress, DateOfBirth = entity.DateOfBirth, Weight = entity.Weight, Height = entity.Height, Doctor = DoctorMapper.ToDto(entity.Doctor), Patient = PatientMapper.ToDto(entity.Patient) };
+            var doctor = DoctorMapper.ToDto(entity.Doctor);
+            var patient = PatientMapper.ToDto(entity.Patient);
+            return new AppointmentDto { Id = entity.Id, Hour = entity.Hour, Symptom = entity.Symptom, MobilePhone = entity.MobilePhone, EmailAdress = entity.EmailAdress, DateOfBirth = entity.DateOfBirth, Weight = entity.Weight, Height = entity.Height, Doctor = doctor, Patient = patient };
         }
 
     }

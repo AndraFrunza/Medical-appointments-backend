@@ -10,9 +10,9 @@ namespace BusinessLogic.Mapper
             return new RoleEntity { Id = dto.Id, Name = dto.Name };
         }
 
-        public static RoleDto ToDto(RoleEntity dto)
+        public static RoleDto ToDto(RoleEntity entity)
         {
-            return new RoleDto { Id = dto.Id, Name = dto.Name };
+            return new RoleDto { Id = entity.Id, Name = entity.Name };
         }
     }
 }

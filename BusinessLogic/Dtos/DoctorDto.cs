@@ -10,11 +10,13 @@ namespace BusinessLogic.Dtos
         public CabinetDto Cabinet { get; set; }
         public List<AppointmentDto> Appointments { get; set; }
 
-        public int MobilePhone { get; set; }
+        public string MobilePhone { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        public int RoleId { get; set; }
 
     }
 }

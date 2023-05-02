@@ -15,7 +15,7 @@ namespace WebApi.Controllers
             this.patientService = patientService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var patient = patientService.GetById(id);
@@ -25,7 +25,7 @@ namespace WebApi.Controllers
             return Ok(patient);
         }
 
-        [HttpGet]
+        [HttpGet("number/{number}")]
         public IActionResult GetByMobilePhone(int number)
         {
             var patient = patientService.GetByMobilePhone(number);

@@ -1,23 +1,21 @@
 ﻿using BusinessLogic.Dtos;
 using Database.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Mapper
 {
-   public static class DoctorMapper
+    public static class DoctorMapper
     {
-        public static DoctorEntity ToEntity(DoctorDto dto)
+        public static DoctorEntity ToEntity(DoctorDto dto, RoleEntity role)
         {
-            return new DoctorEntity { Id = dto.Id, Specialization = dto.Specialization, Cabinet = dto.Cabinet, User = dto.User, Appointments = dto.Appointments };
+            return new DoctorEntity { Id = dto.Id, Specialization = dto.Specialization, User = new UserEntity { Email = dto.Email, FirstName = dto.FirstName, LastName = dto.LastName, Role = role }  };
         }
 
         public static DoctorDto ToDto(DoctorEntity entity)
         {
-            return new DoctorDto { Id = entity.Id, Specialization = entity.Specialization, Cabinet = entity.Cabinet, User = entity.User, Appointments = entity.Appointments };
+            var appointments = entity.Appointments.Select(x => AppointmentMapper.ToDto(x)).ToList();
+            var cabinet = CabinetMapper.ToDto(entity.Cabinet);
+            return new DoctorDto { Id = entity.Id, Specialization = entity.Specialization, RoleId = entity.User.Role.Id, LastName = entity.User.LastName, Email = entity.User.Email, FirstName = entity.User.FirstName, Appointments = appointments, Cabinet = cabinet };
         }
     }
 }

@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database.Repositories.Concrete
 {
@@ -29,12 +27,17 @@ namespace Database.Repositories.Concrete
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var admin = context.Admins.Find(id);
+            if (admin != null)
+            {
+                context.Admins.Remove(admin);
+                context.SaveChanges();
+            }
         }
 
         public List<AdminEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Admins.ToList();
         }
 
         public AdminEntity GetByEmail(string email)
@@ -64,7 +67,9 @@ namespace Database.Repositories.Concrete
 
         public AdminEntity Update(AdminEntity entity)
         {
-            throw new NotImplementedException();
+            var admin = context.Admins.Update(entity).Entity;
+            context.SaveChanges();
+            return admin;
         }
     }
 }

@@ -9,17 +9,20 @@ namespace BusinessLogic.Services.Concrete
     public class DoctorService : IDoctorService
     {
         private readonly IDoctorRepository repository;
+        private readonly IRoleRepository roleRepository;
 
-        public DoctorService(IDoctorRepository repository)
+        public DoctorService(IDoctorRepository repository, IRoleRepository roleRepository)
         {
             this.repository = repository;
+            this.roleRepository = roleRepository;
         }
 
         public DoctorDto Create(DoctorDto dto)
         {
-            var entity = DoctorMapper.ToEntity(dto);
-            entity = repository.Create(entity);
-            dto = DoctorMapper.ToDto(entity);
+            var role = roleRepository.GetById(dto.RoleId);
+            var doctor = DoctorMapper.ToEntity(dto, role);
+            doctor = repository.Create(doctor);
+            dto = DoctorMapper.ToDto(doctor);
             return dto;
         }
 
@@ -41,12 +44,16 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto GetByEmail(string email)
         {
-            throw new System.NotImplementedException();
+            var entity = repository.GetBySpecialization(email);
+            var dto = DoctorMapper.ToDto(entity);
+            return dto;
         }
 
         public DoctorDto GetByFirstName(string firstname)
         {
-            throw new System.NotImplementedException();
+            var entity = repository.GetBySpecialization(firstname);
+            var dto = DoctorMapper.ToDto(entity);
+            return dto;
         }
 
         public DoctorDto GetById(int id)
@@ -62,12 +69,16 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto GetByLastName(string lastname)
         {
-            throw new System.NotImplementedException();
+            var entity = repository.GetBySpecialization(lastname);
+            var dto = DoctorMapper.ToDto(entity);
+            return dto;
         }
 
-        public DoctorDto GetByMobilePhone(int number)
+        public DoctorDto GetByMobilePhone(string number)
         {
-            throw new System.NotImplementedException();
+            var entity = repository.GetBySpecialization(number);
+            var dto = DoctorMapper.ToDto(entity);
+            return dto;
         }
 
         public DoctorDto GetBySpecialization(string specialization)
@@ -79,9 +90,10 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto Update(DoctorDto dto)
         {
-            var entity = DoctorMapper.ToEntity(dto);
-            entity = repository.Update(entity);
-            dto = DoctorMapper.ToDto(entity);
+            var role = roleRepository.GetById(dto.RoleId);
+            var doctor = DoctorMapper.ToEntity(dto, role);
+            doctor = repository.Update(doctor);
+            dto = DoctorMapper.ToDto(doctor);
             return dto;
         }
 

@@ -1,6 +1,4 @@
-﻿using Database.Entities;
-
-namespace BusinessLogic.Dtos
+﻿namespace BusinessLogic.Dtos
 {
     public class AppointmentDto
     {

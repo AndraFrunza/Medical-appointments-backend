@@ -1,6 +1,7 @@
 ﻿using Database.Context;
 using Database.Entities;
 using Database.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,7 +39,7 @@ namespace Database.Repositories.Concrete
 
         public PatientEntity GetById(int id)
         {
-            return context.Patients.FirstOrDefault(x => x.Id == id);
+            return context.Patients.Include(x => x.User).Include(x => x.User.Role).FirstOrDefault(x => x.Id == id);
         }
 
         public PatientEntity GetByMobilePhone(int number)

@@ -14,7 +14,7 @@ namespace WebApi.Controllers
             this.appointmentService = appointmentService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var appointment = appointmentService.GetById(id);
@@ -24,7 +24,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("hour/{hour}")]
         public IActionResult GetByHour(int hour)
         {
             var appointment = appointmentService.GetByHour(hour);
@@ -34,7 +34,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("symptom/{symptom}")]
         public IActionResult GetBySymptom(string symptom)
         {
             var appointment = appointmentService.GetBySymptom(symptom);
@@ -44,7 +44,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("number/{number}")]
         public IActionResult GetByMobilePhone(int number)
         {
             var appointment = appointmentService.GetByMobilePhone(number);
@@ -54,7 +54,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("email/{email}")]
         public IActionResult GetByEmailAdress(string email)
         {
             var appointment = appointmentService.GetByEmailAdress(email);
@@ -64,7 +64,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("date/{date}")]
         public IActionResult GetByDateOfBirth(int date)
         {
             var appointment = appointmentService.GetByDateOfBirth(date);
@@ -74,7 +74,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("weight/{weight}")]
         public IActionResult GetByWeight(int weight)
         {
             var appointment = appointmentService.GetByWeight(weight);
@@ -84,7 +84,7 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
-        [HttpGet]
+        [HttpGet("height/{height}")]
         public IActionResult GetByHeight(int height)
         {
             var appointment = appointmentService.GetByHeight(height);
