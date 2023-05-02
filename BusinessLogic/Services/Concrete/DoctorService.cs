@@ -39,6 +39,16 @@ namespace BusinessLogic.Services.Concrete
             return dtos;
         }
 
+        public DoctorDto GetByEmail(string email)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public DoctorDto GetByFirstName(string firstname)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public DoctorDto GetById(int id)
         {
             var entity = repository.GetById(id);
@@ -48,6 +58,16 @@ namespace BusinessLogic.Services.Concrete
             }
             var dto = DoctorMapper.ToDto(entity);
             return dto;
+        }
+
+        public DoctorDto GetByLastName(string lastname)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public DoctorDto GetByMobilePhone(int number)
+        {
+            throw new System.NotImplementedException();
         }
 
         public DoctorDto GetBySpecialization(string specialization)
@@ -64,5 +84,6 @@ namespace BusinessLogic.Services.Concrete
             dto = DoctorMapper.ToDto(entity);
             return dto;
         }
+
     }
 }

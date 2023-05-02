@@ -16,7 +16,6 @@ C:\Licenta\Licenta Backend\Database\bin\Debug\net5.0\Database.runtimeconfig.dev.
 C:\Licenta\Licenta Backend\Database\bin\Debug\net5.0\Database.dll
 C:\Licenta\Licenta Backend\Database\bin\Debug\net5.0\ref\Database.dll
 C:\Licenta\Licenta Backend\Database\bin\Debug\net5.0\Database.pdb
-C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.csproj.AssemblyReference.cache
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.GeneratedMSBuildEditorConfig.editorconfig
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.AssemblyInfoInputs.cache
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.AssemblyInfo.cs
@@ -25,3 +24,4 @@ C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.dll
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\ref\Database.dll
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.pdb
 C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.genruntimeconfig.cache
+C:\Licenta\Licenta Backend\Database\obj\Debug\net5.0\Database.csproj.AssemblyReference.cache

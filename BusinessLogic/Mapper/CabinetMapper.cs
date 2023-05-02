@@ -15,9 +15,10 @@ namespace BusinessLogic.Mapper
             return new CabinetEntity { Id = dto.Id, Name = dto.Name };
         }
 
-        public static CabinetDto ToDto(CabinetEntity dto)
+        public static CabinetDto ToDto(CabinetEntity entity)
         {
-            return new CabinetDto { Id = dto.Id, Name = dto.Name };
+            var doctors = entity.Doctors.Select(x => DoctorMapper.ToDto(x)).ToList();
+            return new CabinetDto { Id = entity.Id, Name = entity.Name, Doctors = doctors };
         }
     }
 }

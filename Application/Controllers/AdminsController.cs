@@ -14,7 +14,7 @@ namespace WebApi.Controllers
             this.adminService = adminService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var admin = adminService.GetById(id);
@@ -24,17 +24,7 @@ namespace WebApi.Controllers
             return Ok(admin);
         }
 
-        [HttpGet]
-        public IActionResult GetByMobilePhone(int number)
-        {
-            var admin = adminService.GetByMobilePhone(number);
-            if (admin == null)
-                return BadRequest(new { message = $"Nu exista niciun admin cu id-ul {number}" });
-
-            return Ok(admin);
-        }
-
-        [HttpGet]
+        [HttpGet("firstname/{firstname}")]
         public IActionResult GetByFirstName(string firstname)
         {
             var admin = adminService.GetByFirstName(firstname);
@@ -44,7 +34,7 @@ namespace WebApi.Controllers
             return Ok(admin);
         }
 
-        [HttpGet]
+        [HttpGet("lastname/{lastname}")]
         public IActionResult GetByLastName(string lastname)
         {
             var admin = adminService.GetByLastName(lastname);
@@ -54,7 +44,7 @@ namespace WebApi.Controllers
             return Ok(admin);
         }
 
-        [HttpGet]
+        [HttpGet("email/{email}")]
         public IActionResult GetByEmail(string email)
         {
             var admin = adminService.GetByEmail(email);

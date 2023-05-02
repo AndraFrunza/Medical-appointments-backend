@@ -12,7 +12,7 @@ namespace BusinessLogic.Dtos
         public int DateOfBirth { get; set; }
         public int Weight { get; set; }
         public int Height { get; set; }
-        public DoctorEntity Doctor { get; set; }
-        public PatientEntity Patient { get; set; }
+        public DoctorDto Doctor { get; set; }
+        public PatientDto Patient { get; set; }
     }
 }

@@ -15,9 +15,9 @@ namespace BusinessLogic.Mapper
             return new DoctorEntity { Id = dto.Id, Specialization = dto.Specialization, Cabinet = dto.Cabinet, User = dto.User, Appointments = dto.Appointments };
         }
 
-        public static DoctorDto ToDto(DoctorEntity dto)
+        public static DoctorDto ToDto(DoctorEntity entity)
         {
-            return new DoctorDto { Id = dto.Id, Specialization = dto.Specialization, Cabinet = dto.Cabinet, User = dto.User, Appointments = dto.Appointments };
+            return new DoctorDto { Id = entity.Id, Specialization = entity.Specialization, Cabinet = entity.Cabinet, User = entity.User, Appointments = entity.Appointments };
         }
     }
 }

@@ -9,15 +9,18 @@ namespace BusinessLogic.Services.Concrete
     public class AdminService : IAdminService
     {
         private readonly IAdminRepository repository;
+        private readonly IRoleRepository roleRepository;
 
-        public AdminService(IAdminRepository repository)
+        public AdminService(IAdminRepository repository, IRoleRepository roleRepository)
         {
             this.repository = repository;
+            this.roleRepository = roleRepository;
         }
 
         public AdminDto Create(AdminDto dto)
         {
-            var admin = AdminMapper.ToEntity(dto);
+            var role = roleRepository.GetById(dto.RoleId);
+            var admin = AdminMapper.ToEntity(dto, role);
             admin = repository.Create(admin);
             dto = AdminMapper.ToDto(admin);
             return dto;
@@ -71,16 +74,10 @@ namespace BusinessLogic.Services.Concrete
             return dto;
         }
 
-        public AdminDto GetByMobilePhone(int number)
-        {
-            var entity = repository.GetByMobilePhone(number);
-            var dto = AdminMapper.ToDto(entity);
-            return dto;
-        }
-
         public AdminDto Update(AdminDto dto)
         {
-            var entity = AdminMapper.ToEntity(dto);
+            var role = roleRepository.GetById(dto.RoleId);
+            var entity = AdminMapper.ToEntity(dto, role);
             entity = repository.Update(entity);
             dto = AdminMapper.ToDto(entity);
             return dto;

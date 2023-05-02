@@ -12,8 +12,6 @@ namespace BusinessLogic.Dtos
 
         public string Email { get; set; }
 
-        public RoleEntity Role { get; set; }
-
         public List<AppointmentDto> Appointments { get; set; }
     }
 }
