@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("number/{number}")]
-        public IActionResult GetByMobilePhone(int number)
+        public IActionResult GetByMobilePhone(string number)
         {
             var patient = patientService.GetByMobilePhone(number);
             if (patient == null)

@@ -78,7 +78,7 @@ namespace BusinessLogic.Services.Concrete
             return dto;
         }
 
-        public AppointmentDto GetByMobilePhone(int number)
+        public AppointmentDto GetByMobilePhone(string number)
         {
             var entity = repository.GetByMobilePhone(number);
             var dto = AppointmentMapper.ToDto(entity);
@@ -92,7 +92,7 @@ namespace BusinessLogic.Services.Concrete
             return dto;
         }
 
-        public AppointmentDto GetByWeight(int weight)
+        public AppointmentDto GetByWeight(double weight)
         {
             var entity = repository.GetByWeight(weight);
             var dto = AppointmentMapper.ToDto(entity);

@@ -7,10 +7,10 @@ namespace BusinessLogic.Services.Abstract
     {
         AppointmentDto GetByHour(int hour);
         AppointmentDto GetBySymptom(string symptom);
-        AppointmentDto GetByMobilePhone(int number);
+        AppointmentDto GetByMobilePhone(string number);
         AppointmentDto GetByEmailAdress(string email);
         AppointmentDto GetByDateOfBirth(int date);
-        AppointmentDto GetByWeight(int weight);
+        AppointmentDto GetByWeight(double weight);
         AppointmentDto GetByHeight(int height);
         
     }

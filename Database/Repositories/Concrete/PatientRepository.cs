@@ -42,7 +42,7 @@ namespace Database.Repositories.Concrete
             return context.Patients.Include(x => x.User).Include(x => x.User.Role).FirstOrDefault(x => x.Id == id);
         }
 
-        public PatientEntity GetByMobilePhone(int number)
+        public PatientEntity GetByMobilePhone(string number)
         {
             return context.Patients.FirstOrDefault(x => x.MobilePhone == number);
         }

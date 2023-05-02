@@ -62,7 +62,7 @@ namespace Database.Repositories.Concrete
             return context.Appointments.FirstOrDefault(x => x.Id == id);
         }
 
-        public AppointmentEntity GetByMobilePhone(int number)
+        public AppointmentEntity GetByMobilePhone(string number)
         {
             return context.Appointments.FirstOrDefault(x => x.MobilePhone == number);
         }
@@ -72,7 +72,7 @@ namespace Database.Repositories.Concrete
             return context.Appointments.FirstOrDefault(x => x.Symptom == symptom);
         }
 
-        public AppointmentEntity GetByWeight(int weight)
+        public AppointmentEntity GetByWeight(double weight)
         {
             return context.Appointments.FirstOrDefault(x => x.Weight == weight);
         }

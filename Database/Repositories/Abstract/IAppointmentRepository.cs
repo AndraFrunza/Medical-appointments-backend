@@ -6,10 +6,10 @@ namespace Database.Repositories.Abstract
     {
         AppointmentEntity GetByHour(int hour);
         AppointmentEntity GetBySymptom(string symptom);
-        AppointmentEntity GetByMobilePhone(int number);
+        AppointmentEntity GetByMobilePhone(string number);
         AppointmentEntity GetByEmailAdress(string email);
         AppointmentEntity GetByDateOfBirth(int date);
-        AppointmentEntity GetByWeight(int weight);
+        AppointmentEntity GetByWeight(double weight);
         AppointmentEntity GetByHeight(int height);
     }
 }

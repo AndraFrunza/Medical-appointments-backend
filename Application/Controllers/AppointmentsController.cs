@@ -45,7 +45,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("number/{number}")]
-        public IActionResult GetByMobilePhone(int number)
+        public IActionResult GetByMobilePhone(string number)
         {
             var appointment = appointmentService.GetByMobilePhone(number);
             if (appointment == null)
@@ -75,7 +75,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("weight/{weight}")]
-        public IActionResult GetByWeight(int weight)
+        public IActionResult GetByWeight(double weight)
         {
             var appointment = appointmentService.GetByWeight(weight);
             if (appointment == null)

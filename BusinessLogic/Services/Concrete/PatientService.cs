@@ -53,7 +53,7 @@ namespace BusinessLogic.Services.Concrete
             return dto;
         }
 
-        public PatientDto GetByMobilePhone(int number)
+        public PatientDto GetByMobilePhone(string number)
         {
             var patient = repository.GetByMobilePhone(number);
             var dto = PatientMapper.ToDto(patient);

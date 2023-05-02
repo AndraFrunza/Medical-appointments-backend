@@ -60,7 +60,7 @@ namespace Database.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public AdminEntity GetByMobilePhone(int number)
+        public AdminEntity GetByMobilePhone(string number)
         {
             throw new NotImplementedException();
         }
