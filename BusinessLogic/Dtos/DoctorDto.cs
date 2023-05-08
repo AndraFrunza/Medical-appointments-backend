@@ -8,7 +8,7 @@ namespace BusinessLogic.Dtos
         public int Id { get; set; }
         public string Specialization { get; set; }
         public CabinetDto Cabinet { get; set; }
-        public List<AppointmentDto> Appointments { get; set; }
+        
 
         public string MobilePhone { get; set; }
         public string FirstName { get; set; }

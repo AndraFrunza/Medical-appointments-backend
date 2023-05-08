@@ -1,6 +1,7 @@
 ﻿using Database.Context;
 using Database.Entities;
 using Database.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -34,47 +35,47 @@ namespace Database.Repositories.Concrete
 
         public List<AppointmentEntity> GetAll()
         {
-            return context.Appointments.ToList();
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
         }
 
         public AppointmentEntity GetByDateOfBirth(int date)
         {
-            return context.Appointments.FirstOrDefault(x => x.DateOfBirth == date);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.DateOfBirth == date);
         }
 
         public AppointmentEntity GetByEmailAdress(string email)
         {
-            return context.Appointments.FirstOrDefault(x => x.EmailAdress == email);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.EmailAdress == email);
         }
 
         public AppointmentEntity GetByHeight(int height)
         {
-            return context.Appointments.FirstOrDefault(x => x.Height == height);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.Height == height);
         }
 
         public AppointmentEntity GetByHour(int hour)
         {
-            return context.Appointments.FirstOrDefault(x => x.Hour == hour);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.Hour == hour);
         }
 
         public AppointmentEntity GetById(int id)
         {
-            return context.Appointments.FirstOrDefault(x => x.Id == id);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.Id == id);
         }
 
         public AppointmentEntity GetByMobilePhone(string number)
         {
-            return context.Appointments.FirstOrDefault(x => x.MobilePhone == number);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.MobilePhone == number);
         }
 
         public AppointmentEntity GetBySymptom(string symptom)
         {
-            return context.Appointments.FirstOrDefault(x => x.Symptom == symptom);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.Symptom == symptom);
         }
 
         public AppointmentEntity GetByWeight(double weight)
         {
-            return context.Appointments.FirstOrDefault(x => x.Weight == weight);
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.Weight == weight);
         }
 
         public AppointmentEntity Update(AppointmentEntity entity)

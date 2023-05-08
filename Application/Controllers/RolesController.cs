@@ -15,7 +15,7 @@ namespace WebApi.Controllers
             this.roleService = roleService;
         }
 
-        [HttpGet]
+        [HttpGet("id/{id}")]
         public IActionResult GetById(int id)
         {
             var role = roleService.GetById(id);
@@ -25,7 +25,7 @@ namespace WebApi.Controllers
             return Ok(role);
         }
 
-        [HttpGet]
+        [HttpGet("name/{name}")]
         public IActionResult GetByName(string name)
         {
             var role = roleService.GetByName(name);

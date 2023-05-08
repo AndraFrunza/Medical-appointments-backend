@@ -10,17 +10,21 @@ namespace BusinessLogic.Services.Concrete
     {
         private readonly IDoctorRepository repository;
         private readonly IRoleRepository roleRepository;
+        private readonly ICabinetRepository cabinetRepository;
 
-        public DoctorService(IDoctorRepository repository, IRoleRepository roleRepository)
+        public DoctorService(IDoctorRepository repository, IRoleRepository roleRepository, ICabinetRepository cabinetRepository)
         {
             this.repository = repository;
             this.roleRepository = roleRepository;
+            this.cabinetRepository = cabinetRepository;
+
         }
 
         public DoctorDto Create(DoctorDto dto)
         {
+            var cabinet = cabinetRepository.GetById(dto.Cabinet.Id);
             var role = roleRepository.GetById(dto.RoleId);
-            var doctor = DoctorMapper.ToEntity(dto, role);
+            var doctor = DoctorMapper.ToEntity(dto, role, cabinet);
             doctor = repository.Create(doctor);
             dto = DoctorMapper.ToDto(doctor);
             return dto;
@@ -44,14 +48,14 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto GetByEmail(string email)
         {
-            var entity = repository.GetBySpecialization(email);
+            var entity = repository.GetByEmail(email);
             var dto = DoctorMapper.ToDto(entity);
             return dto;
         }
 
         public DoctorDto GetByFirstName(string firstname)
         {
-            var entity = repository.GetBySpecialization(firstname);
+            var entity = repository.GetByFirstName(firstname);
             var dto = DoctorMapper.ToDto(entity);
             return dto;
         }
@@ -69,14 +73,14 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto GetByLastName(string lastname)
         {
-            var entity = repository.GetBySpecialization(lastname);
+            var entity = repository.GetByLastName(lastname);
             var dto = DoctorMapper.ToDto(entity);
             return dto;
         }
 
         public DoctorDto GetByMobilePhone(string number)
         {
-            var entity = repository.GetBySpecialization(number);
+            var entity = repository.GetByMobilePhone(number);
             var dto = DoctorMapper.ToDto(entity);
             return dto;
         }
@@ -90,8 +94,9 @@ namespace BusinessLogic.Services.Concrete
 
         public DoctorDto Update(DoctorDto dto)
         {
+            var cabinet = cabinetRepository.GetById(dto.Cabinet.Id);
             var role = roleRepository.GetById(dto.RoleId);
-            var doctor = DoctorMapper.ToEntity(dto, role);
+            var doctor = DoctorMapper.ToEntity(dto, role, cabinet);
             doctor = repository.Update(doctor);
             dto = DoctorMapper.ToDto(doctor);
             return dto;

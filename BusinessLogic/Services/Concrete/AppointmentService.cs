@@ -9,15 +9,21 @@ namespace BusinessLogic.Services.Concrete
     public class AppointmentService : IAppointmentService
     {
         private readonly IAppointmentRepository repository;
+        private readonly IDoctorRepository doctorRepository;
+        private readonly IPatientRepository patientRepository;
 
-        public AppointmentService(IAppointmentRepository repository)
+        public AppointmentService(IAppointmentRepository repository, IDoctorRepository doctorRepository, IPatientRepository patientRepository)
         {
             this.repository = repository;
+            this.doctorRepository = doctorRepository;
+            this.patientRepository = patientRepository;
         }
 
         public AppointmentDto Create(AppointmentDto dto)
         {
-            var entity = AppointmentMapper.ToEntity(dto);
+            var doctor = doctorRepository.GetById(dto.Doctor.Id);
+            var patient = patientRepository.GetById(dto.Patient.Id);
+            var entity = AppointmentMapper.ToEntity(dto, doctor, patient);
             entity = repository.Create(entity);
             dto = AppointmentMapper.ToDto(entity);
             return dto;
@@ -101,7 +107,9 @@ namespace BusinessLogic.Services.Concrete
 
         public AppointmentDto Update(AppointmentDto dto)
         {
-            var entity = AppointmentMapper.ToEntity(dto);
+            var doctor = doctorRepository.GetById(dto.Doctor.Id);
+            var patient = patientRepository.GetById(dto.Patient.Id);
+            var entity = AppointmentMapper.ToEntity(dto, doctor, patient);
             entity = repository.Update(entity);
             dto = AppointmentMapper.ToDto(entity);
             return dto;

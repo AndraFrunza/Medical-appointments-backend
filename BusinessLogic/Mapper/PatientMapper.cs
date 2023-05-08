@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Dtos;
 using Database.Entities;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BusinessLogic.Mapper
@@ -8,13 +9,35 @@ namespace BusinessLogic.Mapper
     {
         public static PatientEntity ToEntity(PatientDto dto, RoleEntity role)
         {
-            return new PatientEntity { Id = dto.Id, User = new UserEntity { Email = dto.Email, FirstName = dto.FirstName, LastName = dto.LastName, Role = role, Id = dto.Id } };
+            return new PatientEntity 
+            { 
+                Id = dto.Id, 
+                MobilePhone = dto.MobilePhone,
+                User = new UserEntity 
+                { 
+                    Email = dto.Email, 
+                    FirstName = dto.FirstName, 
+                    LastName = dto.LastName, 
+                    Role = role, 
+                    Id = dto.Id 
+                } 
+            };
         }
 
         public static PatientDto ToDto(PatientEntity entity)
         {
-            var appointments = entity.Appointments.Select(x => AppointmentMapper.ToDto(x)).ToList();
-            return new PatientDto { Id = entity.Id, MobilePhone = entity.MobilePhone, RoleId = entity.User.Role.Id, LastName = entity.User.LastName, FirstName = entity.User.FirstName, Email = entity.User.Email, Appointments = appointments };
+           
+
+            return new PatientDto 
+            { 
+                Id = entity.Id, 
+                MobilePhone = entity.MobilePhone, 
+                RoleId = entity.User.Role.Id, 
+                LastName = entity.User.LastName, 
+                FirstName = entity.User.FirstName, 
+                Email = entity.User.Email, 
+                
+            };
         }
     }
 }

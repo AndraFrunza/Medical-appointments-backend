@@ -1,6 +1,7 @@
 ﻿using Database.Context;
 using Database.Entities;
 using Database.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -34,12 +35,32 @@ namespace Database.Repositories.Concrete
 
         public List<DoctorEntity> GetAll()
         {
-            return context.Doctors.ToList();
+            return context.Doctors.Include(x => x.User).Include(x => x.Cabinet).Include(x => x.User.Role).ToList();
+        }
+
+        public DoctorEntity GetByEmail(string email)
+        {
+            return context.Doctors.FirstOrDefault(x => x.Email == email);
+        }
+
+        public DoctorEntity GetByFirstName(string firstname)
+        {
+            return context.Doctors.FirstOrDefault(x => x.FirstName == firstname);
         }
 
         public DoctorEntity GetById(int id)
         {
-            return context.Doctors.FirstOrDefault(x => x.Id == id);
+            return context.Doctors.Include(x => x.Cabinet).Include(x => x.User).Include(x => x.User.Role).FirstOrDefault(x => x.Id == id);
+        }
+
+        public DoctorEntity GetByLastName(string lastname)
+        {
+            return context.Doctors.FirstOrDefault(x => x.LastName == lastname);
+        }
+
+        public DoctorEntity GetByMobilePhone(string number)
+        {
+            return context.Doctors.FirstOrDefault(x => x.MobilePhone == number);
         }
 
         public DoctorEntity GetBySpecialization(string specialization)

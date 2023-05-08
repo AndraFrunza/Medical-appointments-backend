@@ -11,6 +11,6 @@ namespace BusinessLogic.Dtos
 
         public string Email { get; set; }
         public int RoleId { get; set; }
-        public List<AppointmentDto> Appointments { get; set; }
+        
     }
 }

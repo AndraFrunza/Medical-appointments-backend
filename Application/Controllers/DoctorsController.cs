@@ -39,7 +39,7 @@ namespace WebApi.Controllers
         {
             var doctor = doctorService.GetByMobilePhone(number);
             if (doctor == null)
-                return BadRequest(new { message = $"Nu exista niciun admin cu id-ul {number}" });
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul {number}" });
 
             return Ok(doctor);
         }
@@ -49,7 +49,7 @@ namespace WebApi.Controllers
         {
             var doctor = doctorService.GetByFirstName(firstname);
             if (doctor == null)
-                return BadRequest(new { message = $"Nu exista niciun admin cu id-ul {firstname}" });
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul {firstname}" });
 
             return Ok(doctor);
         }
@@ -59,7 +59,7 @@ namespace WebApi.Controllers
         {
             var doctor = doctorService.GetByLastName(lastname);
             if (doctor == null)
-                return BadRequest(new { message = $"Nu exista niciun admin cu id-ul {lastname}" });
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul {lastname}" });
 
             return Ok(doctor);
         }
@@ -69,7 +69,7 @@ namespace WebApi.Controllers
         {
             var doctor = doctorService.GetByEmail(email);
             if (doctor == null)
-                return BadRequest(new { message = $"Nu exista niciun admin cu id-ul {email}" });
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul {email}" });
 
             return Ok(doctor);
         }

@@ -37,7 +37,7 @@ namespace Database.Repositories.Concrete
 
         public List<AdminEntity> GetAll()
         {
-            return context.Admins.ToList();
+            return context.Admins.Include(x => x.User).Include(x => x.User.Role).ToList();
         }
 
         public AdminEntity GetByEmail(string email)

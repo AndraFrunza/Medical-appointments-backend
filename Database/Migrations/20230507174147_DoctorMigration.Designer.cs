@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ClinicaContext))]
-    [Migration("20230501181241_ModifiedTypes")]
-    partial class ModifiedTypes
+    [Migration("20230507174147_DoctorMigration")]
+    partial class DoctorMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,8 +63,8 @@ namespace Database.Migrations
                     b.Property<int>("Hour")
                         .HasColumnType("int");
 
-                    b.Property<int>("MobilePhone")
-                        .HasColumnType("int");
+                    b.Property<string>("MobilePhone")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("PatientEntityId")
                         .HasColumnType("int");
@@ -75,8 +75,8 @@ namespace Database.Migrations
                     b.Property<string>("Symptom")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Weight")
-                        .HasColumnType("int");
+                    b.Property<double>("Weight")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -116,6 +116,18 @@ namespace Database.Migrations
                     b.Property<int?>("CabinetId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobilePhone")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Specialization")
                         .HasColumnType("nvarchar(max)");
 
@@ -138,8 +150,8 @@ namespace Database.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("MobilePhone")
-                        .HasColumnType("int");
+                    b.Property<string>("MobilePhone")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("UserId")
                         .HasColumnType("int");

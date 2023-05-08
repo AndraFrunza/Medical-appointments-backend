@@ -7,13 +7,27 @@ namespace BusinessLogic.Mapper
     {
         public static UserEntity ToEntity(UserDto dto)
         {
-            return new UserEntity { Id = dto.Id, FirstName = dto.FirstName, LastName = dto.LastName, Email = dto.Email, Password = dto.Password };
+            return new UserEntity 
+            { 
+                Id = dto.Id, 
+                FirstName = dto.FirstName, 
+                LastName = dto.LastName, 
+                Email = dto.Email 
+            };
         }
 
         public static UserDto ToDto(UserEntity entity)
         {
             var role = RoleMapper.ToDto(entity.Role);  
-            return new UserDto { Id = entity.Id, FirstName = entity.FirstName, LastName = entity.LastName, Email = entity.Email, Password = entity.Password, Role = role };
+            return new UserDto 
+            { 
+                Id = entity.Id, 
+                FirstName = entity.FirstName, 
+                LastName = entity.LastName, 
+                Email = entity.Email, 
+                Password = entity.Password, 
+                Role = role 
+            };
         }
     }
 }

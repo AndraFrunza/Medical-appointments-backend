@@ -8,5 +8,6 @@ namespace Database.Repositories.Abstract
         UserEntity GetByLastName(string lastname);
         UserEntity GetByEmail(string email);
         UserEntity GetByPassword(string password);
+        
     }
 }
