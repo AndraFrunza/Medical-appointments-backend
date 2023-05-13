@@ -38,7 +38,6 @@ namespace BusinessLogic.Mapper
                 LastName = entity.User.LastName,
                 Email = entity.User.Email,
                 FirstName = entity.User.FirstName,
-                
                 Cabinet = cabinet,
                 MobilePhone = entity.MobilePhone
             };

@@ -11,8 +11,5 @@ namespace BusinessLogic.Dtos
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Token { get; set; }
-
-
-    
     }
 }

@@ -34,7 +34,7 @@ namespace Database.Repositories.Concrete
 
         public List<PatientEntity> GetAll()
         {
-            return context.Patients.ToList();
+            return context.Patients.Include(x => x.User).Include(x => x.User.Role).ToList();
         }
 
         public PatientEntity GetById(int id)
