@@ -1,6 +1,7 @@
 ﻿using Database.Context;
 using Database.Entities;
 using Database.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -34,27 +35,27 @@ namespace Database.Repositories.Concrete
 
         public List<UserEntity> GetAll()
         {
-            return context.Users.ToList();
+            return context.Users.Include(x => x.Role).ToList();
         }
 
         public UserEntity GetByEmail(string email)
         {
-            return context.Users.FirstOrDefault(x => x.Email == email);
+            return context.Users.Include(x => x.Role).FirstOrDefault(x => x.Email == email);
         }
 
         public UserEntity GetByFirstName(string firstname)
         {
-            return context.Users.FirstOrDefault(x => x.FirstName == firstname);
+            return context.Users.Include(x => x.Role).FirstOrDefault(x => x.FirstName == firstname);
         }
 
         public UserEntity GetById(int id)
         {
-            return context.Users.FirstOrDefault(x => x.Id == id);
+            return context.Users.Include(x => x.Role).FirstOrDefault(x => x.Id == id);
         }
 
         public UserEntity GetByLastName(string lastname)
         {
-            return context.Users.FirstOrDefault(x => x.LastName == lastname);
+            return context.Users.Include(x => x.Role).FirstOrDefault(x => x.LastName == lastname);
         }
 
         public UserEntity GetByPassword(string password)

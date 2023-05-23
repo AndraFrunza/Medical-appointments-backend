@@ -1,15 +1,11 @@
 
 
-using Database.Entities;
-
 namespace BusinessLogic.Dtos
 {
     public class AuthenticateResponseDto
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Username { get; set; }
+
+        public UserDto User { get; set; }
         public string Token { get; set; }
     }
 }

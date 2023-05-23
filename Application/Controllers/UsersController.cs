@@ -36,7 +36,7 @@ namespace WebApi.Controllers
             return Ok(user);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("get-all")]
         public IActionResult GetAll()
         {

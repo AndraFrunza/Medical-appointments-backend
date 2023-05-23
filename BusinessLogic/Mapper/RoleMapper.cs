@@ -20,6 +20,7 @@ namespace BusinessLogic.Mapper
             { 
                 Id = entity.Id, 
                 Name = entity.Name 
+                
             };
         }
     }

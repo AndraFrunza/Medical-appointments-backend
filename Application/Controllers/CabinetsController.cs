@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Dtos;
 using BusinessLogic.Services.Abstract;
+using Database.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -34,6 +35,7 @@ namespace WebApi.Controllers
             return Ok(cabinet);
         }
 
+        [Authorize(RoleCodes.Admin)]
         [HttpPost]
         public IActionResult Create(CabinetDto cabinet)
         {
@@ -55,7 +57,7 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        //[Authorize]
+        [Authorize(RoleCodes.Doctor, RoleCodes.Admin)]
         [HttpGet("get-all")]
         public IActionResult GetAll()
         {

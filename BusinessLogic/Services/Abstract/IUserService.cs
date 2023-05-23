@@ -12,7 +12,7 @@ namespace BusinessLogic.Services.Interfaces
     {
         AuthenticateResponseDto Authenticate(AuthenticateRequestDto model);
         IEnumerable<UserEntity> GetAll();
-        UserEntity GetById(int id);
+        UserDto GetById(int id);
         
     }
 }
