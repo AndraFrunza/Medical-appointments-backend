@@ -60,6 +60,13 @@ namespace BusinessLogic.Services.Concrete
             return dto;
         }
 
+        public PatientDto GetPatientByUserId(int userId)
+        {
+            var patient = repository.GetPatientByUserId(userId);
+            var dto = PatientMapper.ToDto(patient);
+            return dto;
+        }
+
         public PatientDto Update(PatientDto dto)
         {
             var role = roleRepository.GetById(dto.RoleId);

@@ -1,8 +1,11 @@
 ﻿using BusinessLogic.Dtos;
+using BusinessLogic.Helpers;
 using BusinessLogic.Mapper;
 using BusinessLogic.Services.Abstract;
 using Database.Repositories.Abstract;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BusinessLogic.Services.Concrete
 {
@@ -24,6 +27,11 @@ namespace BusinessLogic.Services.Concrete
             var doctor = doctorRepository.GetById(dto.Doctor.Id);
             var patient = patientRepository.GetById(dto.Patient.Id);
             var entity = AppointmentMapper.ToEntity(dto, doctor, patient);
+            var appointments = repository.GetByDoctorId(doctor.Id);
+            if (appointments.Any(appointment => appointment.Date == dto.Date && appointment.Hour == dto.Hour)) 
+            {
+                throw new AppointmentException("Exista deja o programare la aceasta ora");
+            }
             entity = repository.Create(entity);
             dto = AppointmentMapper.ToDto(entity);
             return dto;
@@ -45,11 +53,22 @@ namespace BusinessLogic.Services.Concrete
             return dtos;
         }
 
-        public AppointmentDto GetByDateOfBirth(int date)
+        public AppointmentDto GetByDateOfBirth(DateTime date)
         {
             var entity = repository.GetByDateOfBirth(date);
             var dto = AppointmentMapper.ToDto(entity);
             return dto;
+        }
+
+        public List<AppointmentDto> GetByDoctorId(int doctorId)
+        {
+            var entities = repository.GetByDoctorId(doctorId);
+            var dtos = new List<AppointmentDto>();
+            foreach (var entity in entities)
+            {
+                dtos.Add(AppointmentMapper.ToDto(entity));
+            }
+            return dtos;
         }
 
         public AppointmentDto GetByEmailAdress(string email)

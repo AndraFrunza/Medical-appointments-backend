@@ -1,6 +1,8 @@
 ﻿using BusinessLogic.Dtos;
+using BusinessLogic.Helpers;
 using BusinessLogic.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace WebApi.Controllers
 {
@@ -65,11 +67,22 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("date/{date}")]
-        public IActionResult GetByDateOfBirth(int date)
+        public IActionResult GetByDateOfBirth(DateTime date)
         {
             var appointment = appointmentService.GetByDateOfBirth(date);
             if (appointment == null)
                 return BadRequest(new { message = $"Nu exista nici o programare cu id-ul {date}" });
+
+            return Ok(appointment);
+        }
+
+        //[Authorize(RoleCodes.Doctor)]
+        [HttpGet("doctorId/{doctorId}")]
+        public IActionResult GetByDoctorId(int doctorId)
+        {
+            var appointment = appointmentService.GetByDoctorId(doctorId);
+            if (appointment == null)
+                return BadRequest(new { message = $"Nu exista nicio programare cu doctor cu id-ul {doctorId}" });
 
             return Ok(appointment);
         }
@@ -97,8 +110,17 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult Create(AppointmentDto appointment)
         {
-            appointment = appointmentService.Create(appointment);
-            return Ok(appointment);
+            try
+            {
+               appointment = appointmentService.Create(appointment);
+               return Ok(appointment);
+            }
+            catch(AppointmentException exception)
+            {
+                return BadRequest(new { message = exception.Message });
+            }
+            
+            
         }
 
         [HttpPut]

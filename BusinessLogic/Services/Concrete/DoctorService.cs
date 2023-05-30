@@ -46,6 +46,17 @@ namespace BusinessLogic.Services.Concrete
             return dtos;
         }
 
+        public List<DoctorDto> GetByCabinetId(int cabinet)
+        {
+            var entities = repository.GetByCabinetId(cabinet);
+            var dtos = new List<DoctorDto>();
+            foreach (var entity in entities)
+            {
+                dtos.Add(DoctorMapper.ToDto(entity));
+            }
+            return dtos;
+        }
+
         public DoctorDto GetByEmail(string email)
         {
             var entity = repository.GetByEmail(email);
@@ -90,6 +101,16 @@ namespace BusinessLogic.Services.Concrete
             var entity = repository.GetBySpecialization(specialization);
             var dto = DoctorMapper.ToDto(entity);
             return dto;
+        }
+
+        public DoctorDto GetDoctorByUserId(int userId)
+        {
+            var entity = repository.GetDoctorByUserId(userId);
+            if(entity != null){ 
+            var dto = DoctorMapper.ToDto(entity);
+            return dto;
+        }
+            return null;
         }
 
         public DoctorDto Update(DoctorDto dto)

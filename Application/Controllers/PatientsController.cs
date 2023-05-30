@@ -35,6 +35,16 @@ namespace WebApi.Controllers
             return Ok(patient);
         }
 
+        [HttpGet("userId/{userId}")]
+        public IActionResult GetPatientByUserId(int userId)
+        {
+            var patient = patientService.GetPatientByUserId(userId);
+            if (patient == null)
+                return BadRequest(new { message = $"Nu exista niciun pacient cu id-ul de user {userId}" });
+
+            return Ok(patient);
+        }
+
         [HttpPost]
         public IActionResult Create(PatientDto patient)
         {

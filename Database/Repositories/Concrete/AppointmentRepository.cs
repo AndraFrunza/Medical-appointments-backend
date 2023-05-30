@@ -2,6 +2,7 @@
 using Database.Entities;
 using Database.Repositories.Abstract;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,9 +39,14 @@ namespace Database.Repositories.Concrete
             return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
         }
 
-        public AppointmentEntity GetByDateOfBirth(int date)
+        public AppointmentEntity GetByDateOfBirth(DateTime date)
         {
             return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.DateOfBirth == date);
+        }
+
+        public List<AppointmentEntity> GetByDoctorId(int doctorId)
+        {
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).Where(x => x.Doctor.Id == doctorId).ToList();
         }
 
         public AppointmentEntity GetByEmailAdress(string email)

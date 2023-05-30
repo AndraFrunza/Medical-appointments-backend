@@ -12,7 +12,8 @@ namespace BusinessLogic.Mapper
             return new AppointmentEntity 
             { 
               
-                Hour = dto.Hour, 
+                Hour = dto.Hour,
+                Date = dto.Date,
                 Symptom = dto.Symptom, 
                 MobilePhone = dto.MobilePhone, 
                 EmailAdress = dto.EmailAdress, 
@@ -31,6 +32,7 @@ namespace BusinessLogic.Mapper
             return new AppointmentDto 
             { 
                 Id = entity.Id, 
+                Date = entity.Date,
                 Hour = entity.Hour, 
                 Symptom = entity.Symptom, 
                 MobilePhone = entity.MobilePhone, 

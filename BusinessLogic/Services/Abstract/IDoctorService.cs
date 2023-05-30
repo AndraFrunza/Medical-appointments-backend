@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Dtos;
 using BusinessLogic.Services.Interfaces;
+using System.Collections.Generic;
 
 namespace BusinessLogic.Services.Abstract
 {
@@ -10,5 +11,7 @@ namespace BusinessLogic.Services.Abstract
         DoctorDto GetByFirstName(string firstname);
         DoctorDto GetByLastName(string lastname);
         DoctorDto GetByEmail(string email);
+        List<DoctorDto> GetByCabinetId(int cabinet);
+        DoctorDto GetDoctorByUserId(int userId);
     }
 }

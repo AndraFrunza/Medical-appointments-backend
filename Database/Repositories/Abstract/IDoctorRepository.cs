@@ -14,5 +14,8 @@ namespace Database.Repositories.Abstract
         DoctorEntity GetByFirstName(string firstname);
         DoctorEntity GetByLastName(string lastname);
         DoctorEntity GetByEmail(string email);
+        List<DoctorEntity>  GetByCabinetId(int cabinet);
+        DoctorEntity GetDoctorByUserId(int userId);
+
     }
 }

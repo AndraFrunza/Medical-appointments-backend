@@ -38,6 +38,11 @@ namespace Database.Repositories.Concrete
             return context.Doctors.Include(x => x.User).Include(x => x.Cabinet).Include(x => x.User.Role).ToList();
         }
 
+        public List<DoctorEntity> GetByCabinetId(int cabinet)
+        {
+            return context.Doctors.Include(x => x.Cabinet).Include(x => x.User).Include(x => x.User.Role).Where(x => x.Cabinet.Id == cabinet).ToList();
+        }
+
         public DoctorEntity GetByEmail(string email)
         {
             return context.Doctors.FirstOrDefault(x => x.Email == email);
@@ -66,6 +71,11 @@ namespace Database.Repositories.Concrete
         public DoctorEntity GetBySpecialization(string specialization)
         {
             return context.Doctors.FirstOrDefault(x => x.Specialization == specialization);
+        }
+
+        public DoctorEntity GetDoctorByUserId(int userId)
+        {
+            return context.Doctors.Include(x => x.Cabinet).Include(x => x.User).Include(x => x.User.Role).FirstOrDefault(x => x.User.Id == userId);
         }
 
         public DoctorEntity Update(DoctorEntity entity)

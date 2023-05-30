@@ -47,6 +47,11 @@ namespace Database.Repositories.Concrete
             return context.Patients.FirstOrDefault(x => x.MobilePhone == number);
         }
 
+        public PatientEntity GetPatientByUserId(int userId)
+        {
+            return context.Patients.Include(x => x.User).Include(x => x.User.Role).FirstOrDefault(x => x.User.Id == userId);
+        }
+
         public PatientEntity Update(PatientEntity entity)
         {
             var patient = context.Patients.Update(entity).Entity;

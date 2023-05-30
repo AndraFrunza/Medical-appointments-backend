@@ -1,5 +1,7 @@
 ﻿using BusinessLogic.Dtos;
 using BusinessLogic.Services.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace BusinessLogic.Services.Abstract
 {
@@ -9,9 +11,10 @@ namespace BusinessLogic.Services.Abstract
         AppointmentDto GetBySymptom(string symptom);
         AppointmentDto GetByMobilePhone(string number);
         AppointmentDto GetByEmailAdress(string email);
-        AppointmentDto GetByDateOfBirth(int date);
+        AppointmentDto GetByDateOfBirth(DateTime date);
         AppointmentDto GetByWeight(double weight);
         AppointmentDto GetByHeight(int height);
+        List<AppointmentDto> GetByDoctorId(int doctorId);
         
     }
 }

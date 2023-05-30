@@ -6,5 +6,6 @@ namespace BusinessLogic.Services.Abstract
     public  interface IPatientService : IService<PatientDto>
     {
         PatientDto GetByMobilePhone(string number);
+        PatientDto GetPatientByUserId(int userId);
     }
 }

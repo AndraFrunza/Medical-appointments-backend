@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Dtos;
 using BusinessLogic.Services.Abstract;
+using Database.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -64,6 +65,17 @@ namespace WebApi.Controllers
             return Ok(doctor);
         }
 
+        [Authorize(RoleCodes.Patient)]
+        [HttpGet("cabinet/{cabinet}")]
+        public IActionResult GetByCabinetId(int cabinet)
+        {
+            var doctor = doctorService.GetByCabinetId(cabinet);
+            if (doctor == null)
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul de cabinet {cabinet}" });
+
+            return Ok(doctor);
+        }
+
         [HttpGet("email/{email}")]
         public IActionResult GetByEmail(string email)
         {
@@ -101,6 +113,18 @@ namespace WebApi.Controllers
         {
             var doctors = doctorService.GetAll();
             return Ok(doctors);
+        }
+
+
+        
+        [HttpGet("userId/{userId}")]
+        public IActionResult GetDoctorByUserId(int userId)
+        {
+            var doctor = doctorService.GetDoctorByUserId(userId);
+            if (doctor == null)
+                return BadRequest(new { message = $"Nu exista niciun doctor cu id-ul de user {userId}" });
+
+            return Ok(doctor);
         }
     }
 }
