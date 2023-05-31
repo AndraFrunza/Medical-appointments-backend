@@ -53,6 +53,28 @@ namespace BusinessLogic.Services.Concrete
             return dtos;
         }
 
+        public List<AppointmentDto> GetAppointmentsByDoctorId(int medicId)
+        {
+            var entities = repository.GetAppointmentsByDoctorId(medicId);
+            var dtos = new List<AppointmentDto>();
+            foreach (var entity in entities)
+            {
+                dtos.Add(AppointmentMapper.ToDto(entity));
+            }
+            return dtos;
+        }
+
+        public List<AppointmentDto> GetAppointmentsByPatientId(int patientId)
+        {
+            var entities = repository.GetAppointmentsByPatientId(patientId);
+            var dtos = new List<AppointmentDto>();
+            foreach (var entity in entities)
+            {
+                dtos.Add(AppointmentMapper.ToDto(entity));
+            }
+            return dtos;
+        }
+
         public AppointmentDto GetByDateOfBirth(DateTime date)
         {
             var entity = repository.GetByDateOfBirth(date);

@@ -39,6 +39,16 @@ namespace Database.Repositories.Concrete
             return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
         }
 
+        public List<AppointmentEntity> GetAppointmentsByDoctorId(int medicId)
+        {
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
+        }
+
+        public List<AppointmentEntity> GetAppointmentsByPatientId(int patientId)
+        {
+           return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
+        }
+
         public AppointmentEntity GetByDateOfBirth(DateTime date)
         {
             return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).FirstOrDefault(x => x.DateOfBirth == date);

@@ -15,6 +15,8 @@ namespace BusinessLogic.Services.Abstract
         AppointmentDto GetByWeight(double weight);
         AppointmentDto GetByHeight(int height);
         List<AppointmentDto> GetByDoctorId(int doctorId);
-        
+        List<AppointmentDto> GetAppointmentsByPatientId(int patientId);
+        List<AppointmentDto> GetAppointmentsByDoctorId(int medicId);
+
     }
 }

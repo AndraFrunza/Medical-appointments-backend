@@ -14,5 +14,7 @@ namespace Database.Repositories.Abstract
         AppointmentEntity GetByWeight(double weight);
         AppointmentEntity GetByHeight(int height);
         List<AppointmentEntity> GetByDoctorId(int doctorId);
+        List<AppointmentEntity> GetAppointmentsByPatientId(int patientId);
+        List<AppointmentEntity> GetAppointmentsByDoctorId(int medicId);
     }
 }

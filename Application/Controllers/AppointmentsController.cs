@@ -107,6 +107,26 @@ namespace WebApi.Controllers
             return Ok(appointment);
         }
 
+        [HttpGet("patientId/{patientId}")]
+        public IActionResult GetAppointmentsByPatientId(int patientId)
+        {
+            var appointment = appointmentService.GetAppointmentsByPatientId(patientId);
+            if (appointment == null)
+                return BadRequest(new { message = $"Nu exista nici o programare pentru pacientul {patientId}" });
+
+            return Ok(appointment);
+        }
+
+        [HttpGet("medicId/{medicId}")]
+        public IActionResult GetAppointmentsByDoctorId(int medicId)
+        {
+            var appointment = appointmentService.GetAppointmentsByDoctorId(medicId);
+            if (appointment == null)
+                return BadRequest(new { message = $"Nu exista nici o programare pentru pacientul {medicId}" });
+
+            return Ok(appointment);
+        }
+
         [HttpPost]
         public IActionResult Create(AppointmentDto appointment)
         {
