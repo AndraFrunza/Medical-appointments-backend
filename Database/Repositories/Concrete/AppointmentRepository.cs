@@ -41,12 +41,12 @@ namespace Database.Repositories.Concrete
 
         public List<AppointmentEntity> GetAppointmentsByDoctorId(int medicId)
         {
-            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
+            return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).Where(x => x.Doctor.Id == medicId).ToList();
         }
 
         public List<AppointmentEntity> GetAppointmentsByPatientId(int patientId)
         {
-           return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).ToList();
+           return context.Appointments.Include(x => x.Doctor).Include(x => x.Patient).Include(x => x.Doctor.User).Include(x => x.Doctor.Cabinet).Include(x => x.Patient.User).Include(x => x.Doctor.User.Role).Include(x => x.Patient.User.Role).Where(x => x.Patient.Id == patientId).ToList();
         }
 
         public AppointmentEntity GetByDateOfBirth(DateTime date)

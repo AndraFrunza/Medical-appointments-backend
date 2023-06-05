@@ -13,6 +13,7 @@ namespace Database.Entities
         public DateTime DateOfBirth { get; set; }
         public double Weight { get; set; }
         public int Height { get; set; }
+        public bool Present { get; set; }
         public DoctorEntity Doctor { get; set; }
         public PatientEntity Patient { get; set; }
 

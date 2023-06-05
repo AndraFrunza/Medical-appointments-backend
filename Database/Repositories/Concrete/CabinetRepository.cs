@@ -1,6 +1,7 @@
 ﻿using Database.Context;
 using Database.Entities;
 using Database.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,7 +40,7 @@ namespace Database.Repositories.Concrete
 
         public CabinetEntity GetById(int id)
         {
-            return context.Cabinets.FirstOrDefault(x => x.Id == id);
+            return context.Cabinets.Include(x => x.Doctors).FirstOrDefault(x => x.Id == id);
         }
 
         public CabinetEntity GetByName(string name)

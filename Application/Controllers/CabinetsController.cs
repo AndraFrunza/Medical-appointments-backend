@@ -35,7 +35,7 @@ namespace WebApi.Controllers
             return Ok(cabinet);
         }
 
-        [Authorize(RoleCodes.Admin)]
+        //[Authorize(RoleCodes.Admin)]
         [HttpPost]
         public IActionResult Create(CabinetDto cabinet)
         {
@@ -57,7 +57,7 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        [Authorize(RoleCodes.Doctor, RoleCodes.Admin, RoleCodes.Patient)]
+        //[Authorize(RoleCodes.Doctor, RoleCodes.Admin, RoleCodes.Patient)]
         [HttpGet("get-all")]
         public IActionResult GetAll()
         {
