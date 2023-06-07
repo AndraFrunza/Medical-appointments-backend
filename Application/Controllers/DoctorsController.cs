@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Dtos;
 using BusinessLogic.Services.Abstract;
+using BusinessLogic.Services.Interfaces;
 using Database.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,11 @@ namespace WebApi.Controllers
     public class DoctorsController : ControllerBase
     {
         private readonly IDoctorService doctorService;
-        public DoctorsController(IDoctorService doctorService)
+        private readonly IUserService userService;
+        public DoctorsController(IDoctorService doctorService, IUserService userService)
         {
             this.doctorService = doctorService;
+            this.userService = userService;
         }
 
         [HttpGet("id/{id}")]

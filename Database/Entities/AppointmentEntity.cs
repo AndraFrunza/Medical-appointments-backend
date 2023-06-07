@@ -14,6 +14,7 @@ namespace Database.Entities
         public double Weight { get; set; }
         public int Height { get; set; }
         public bool Present { get; set; }
+        public string Tratament { get; set; }
         public DoctorEntity Doctor { get; set; }
         public PatientEntity Patient { get; set; }
 
