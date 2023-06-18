@@ -27,7 +27,7 @@ namespace BusinessLogic.Mapper
 
         public static DoctorDto ToDto(DoctorEntity entity)
         {
-            
+
             var cabinet = CabinetMapper.ToDto(entity.Cabinet);
 
             return new DoctorDto

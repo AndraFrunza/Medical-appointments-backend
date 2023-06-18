@@ -8,3 +8,4 @@ namespace Database.Entities
         Admin = 3,
     }
 }
+

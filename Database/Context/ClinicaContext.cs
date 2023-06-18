@@ -28,7 +28,6 @@ namespace Database.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           // modelBuilder.Entity<AdminEntity>().Property(x => x.Id).ValueGeneratedOnAdd();
             modelBuilder.Entity<UserEntity>().HasIndex(x => x.Email).IsUnique(); //creaza index ca sa fie email unic
             modelBuilder.Entity<PatientEntity>().HasMany<AppointmentEntity>().WithOne().OnDelete(DeleteBehavior.Cascade); //daca sterg pacientul , se sterge si programarea
             modelBuilder.Entity<DoctorEntity>().HasMany<AppointmentEntity>().WithOne().OnDelete(DeleteBehavior.NoAction);
