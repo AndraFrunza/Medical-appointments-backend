@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Licenta\\Licenta Backend\\Database\\Database.csproj": {}
+    "C:\\Licenta\\Backend\\Database\\Database.csproj": {}
   },
   "projects": {
-    "C:\\Licenta\\Licenta Backend\\Database\\Database.csproj": {
+    "C:\\Licenta\\Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Licenta\\Licenta Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Licenta\\Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Licenta\\Licenta Backend\\Database\\Database.csproj",
+        "projectPath": "C:\\Licenta\\Backend\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\VivoBook\\.nuget\\packages\\",
-        "outputPath": "C:\\Licenta\\Licenta Backend\\Database\\obj\\",
+        "outputPath": "C:\\Licenta\\Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HE0FdZQhLIbDQXNHw3G1oEy78crkK7QWn+w+Ji4hRzmEBUH3aewjX845fFZMUO8c2n3WJE+gnqXQUJsMVUFVGw==",
+  "dgSpecHash": "KUfUDXAXsWjCi+pnAdhquspOTt3vQknPFmGjxGDCxEdC7mK8EUy0OmW/O7ngeKIwXe3YHXMo6N/ONXDdjlYdWA==",
   "success": true,
-  "projectFilePath": "C:\\Licenta\\Licenta Backend\\Application\\WebApi.csproj",
+  "projectFilePath": "C:\\Licenta\\Backend\\Application\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VivoBook\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",

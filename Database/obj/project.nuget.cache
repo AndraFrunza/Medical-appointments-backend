@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QEFy0+099cf7eed1luu1Z6/3A1IWrBwvppwFmPnycqwvOCY2KQZtpO7ozmPL557+PHPBYs0KlMei9jY9O/9otg==",
+  "dgSpecHash": "Go5PvcjTf/X9QZYjlAZzCtWtdu9+mqgWipOXjnFrlKNXNmw5u+Unkk1EtfnlC4i8ZQ1hi7kwzHthz14uLSPr4Q==",
   "success": true,
-  "projectFilePath": "C:\\Licenta\\Licenta Backend\\Database\\Database.csproj",
+  "projectFilePath": "C:\\Licenta\\Backend\\Database\\Database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VivoBook\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VivoBook\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
